@@ -38,6 +38,14 @@ function calcularTriangulo(lado1, lado2, base, altura) {
   }
 }
 
+function calcularAlturaTriangulo(lado1, base) {
+  if(lado1 == base) {
+    console.warn('Este no es un triangulo isosceles');
+  } else {
+    return Math.sqrt((lado1 ** 2) - ((base ** 2) / 4));
+  }
+}
+
 console.log({
   ladoTriangulo1,
   ladoTriangulo2,
@@ -62,7 +70,7 @@ function calcularCirculo(radio){
   const radioAlCuadrado = Math.pow(radio, 2) // Otra forma de usar exponentes.
 
   return {
-    circunferencia: diametro * Math.PI, // Usando MAth.PI.
+    circunferencia: diametro * Math.PI, // Usando Math.PI.
     area: radioAlCuadrado * Math.PI,
   }
 }
