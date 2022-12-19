@@ -1,11 +1,14 @@
+// Creating object 
+const PlatziMath = {};
+
 //============== MEDIANA ===================================================================
-function esPar(lista) {
+PlatziMath.esPar = function esPar(lista) {
   return !(lista.length % 2);
 }
-function esImpar(lista) {
+PlatziMath.esImpar = function esImpar(lista) {
   return lista.length % 2;
 }
-function calcularMediana(listaDesordenada) {
+PlatziMath.calcularMediana = function calcularMediana(listaDesordenada) {
   const lista = ordenarLista(listaDesordenada);
   const listaEsPar = esPar(lista);
 
@@ -26,7 +29,7 @@ function calcularMediana(listaDesordenada) {
   }
 }
 //=========================ORDENAR LISTA ====================================================
-function ordenarLista(listaDesordenada) {
+PlatziMath.ordenarLista = function ordenarLista(listaDesordenada) {
   function ordenarListaSort(valorAcumulado, nuevoValor) {
      // if (valorAcumulado > nuevoValor) {
     //   return 1;
@@ -42,7 +45,7 @@ function ordenarLista(listaDesordenada) {
   return lista;
 }
 //=============== PROMEDIO ==================================================================
-function calcularPromedio(lista) {
+PlatziMath.calcularPromedio = function calcularPromedio(lista) {
   // Usando ciclos
   // let sumaLista = 0;
   // for(let i = 0; i < lista.length; i++) {
@@ -62,7 +65,7 @@ function calcularPromedio(lista) {
   return promedio;
 }
 //================= MODA =====================================================================
-function calcularModa(lista) {
+PlatziMath.calcularModa = function calcularModa(lista) {
   const listaCount = {};
 
   for(let i=0; i < lista.length; i++) {
@@ -82,7 +85,7 @@ function calcularModa(lista) {
   return moda;
 }
 
-function ordenarListaBidimensional(listaDesordenada, i) {
+PlatziMath.ordenarListaBidimensional = function ordenarListaBidimensional(listaDesordenada, i) {
   function ordenarListaSort(valorAcumulado, nuevoValor) {
     return valorAcumulado[i] - nuevoValor[i];
   }
